@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingBottom="10dp"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
+              android:paddingTop="10dp"
+              tools:context=".activities.questionnaire.QuestionnaireInfoFragment">
+
+    <TextView
+        android:id="@+id/labelDescription"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtViewDescription"
+        android:paddingLeft="3dp"
+        android:layout_below="@+id/labelDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:text=""/>
+
+    <LinearLayout
+        android:layout_below="@+id/txtViewDescription"
+        android:layout_above="@+id/btSaveQuestionnaire"
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Status"/>
+
+        <TextView
+            android:id="@+id/txtViewQuestionnaireStatus"
+            android:paddingLeft="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="left"
+            android:text="Incompleto"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btSaveQuestionnaire"
+        android:text="@string/save_questionnaire"
+        android:textColor="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_green_dark"/>
+</RelativeLayout>

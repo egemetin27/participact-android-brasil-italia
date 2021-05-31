@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "182762764792",
+    "project_id": "participact-brasil"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182762764792:android:50ab6ef8e779f46a",
+        "android_client_info": {
+          "package_name": "br.udesc.esag.participactbrasil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182762764792-6ndc2tpc0su4np0imh5d9g97h59leqce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.udesc.esag.participactbrasil",
+            "certificate_hash": "2B0C05472AAF511E6FF8C4E21ED58500BB55F5DA"
+          }
+        },
+        {
+          "client_id": "182762764792-en5qf6nhclld3pfb5glaoac8cf5gkra8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSizNszSaAvmr_uBV0DqyM_jzDGF91WU4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

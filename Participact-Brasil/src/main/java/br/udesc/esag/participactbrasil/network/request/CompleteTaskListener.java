@@ -1,0 +1,49 @@
+package br.udesc.esag.participactbrasil.network.request;
+
+import android.content.Context;
+
+import com.octo.android.robospice.persistence.exception.SpiceException;
+import com.octo.android.robospice.request.listener.RequestListener;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import br.udesc.esag.participactbrasil.domain.enums.TaskState;
+import br.udesc.esag.participactbrasil.domain.persistence.StateUtility;
+import br.udesc.esag.participactbrasil.domain.persistence.TaskFlat;
+import br.udesc.esag.participactbrasil.domain.rest.ResponseMessage;
+import br.udesc.esag.participactbrasil.support.LoginUtility;
+import br.udesc.esag.participactbrasil.support.SupportStateUtility;
+
+public class CompleteTaskListener implements RequestListener<ResponseMessage> {
+
+    private final static Logger logger = LoggerFactory.getLogger(CompleteTaskListener.class);
+
+
+    private Context context;
+    private TaskFlat task;
+
+    public CompleteTaskListener(Context context, TaskFlat task) {
+        this.task = task;
+        this.context = context;
+    }
+
+    @Override
+    public void onRequestFailure(SpiceException spiceException) {
+        LoginUtility.checkIfLoginException(context, spiceException);
+        logger.warn("Exception uploading the final state of the task with id {}.", task.getId(), spiceException);
+    }
+
+    @Override
+    public void onRequestSuccess(ResponseMessage result) {
+        if (result.getResultCode() == ResponseMessage.RESULT_OK) {
+            logger.info("Successfully uploaded the final state of the task with id {}.", task.getId());
+            //no task will be removed, necessary to show on history
+            //SupportStateUtility.removeTask(context, task);
+            //TODO review to get task status from the server
+            StateUtility.changeTaskState(context, task, TaskState.COMPLETED_WITH_SUCCESS);
+        }
+
+    }
+
+}

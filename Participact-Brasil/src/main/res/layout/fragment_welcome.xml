@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".activities.welcome.WelcomeActivity">
+
+    <ImageView
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_launcher_participact"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#FFF"
+        android:text="ParticipAct Brasil"/>
+
+    <TextView
+        android:paddingTop="16dp"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Tecnologias inovadoras na gestão da cidade inteligente"/>
+
+    <TextView
+        android:paddingTop="16dp"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="O ParticipACT Brasil propõe-se a entender e analisar problemas urbanos reais, usando a Tecnologia da Informação e Comunicação na concepção da gestão de uma cidade inteligente."/>
+
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp"
+             tools:context=".activities.campaign.CampaignTasksFragment">
+
+    <ListView
+        android:id="@+id/listViewTasksFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="6dp"
+        android:divider="@android:color/transparent"
+        android:listSelector="@drawable/list_selector"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/textViewNoTaskAvailable"
+        android:visibility="gone"
+        android:padding="12dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_available_actions"
+        android:textSize="16sp"/>
+
+</FrameLayout>

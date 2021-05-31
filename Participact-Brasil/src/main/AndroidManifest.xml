@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="br.udesc.esag.participactbrasil">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="br.udesc.esag.participactbrasil.participact.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="br.udesc.esag.participactbrasil.participact.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- <uses-permission android:name="android.permission.VIBRATE" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permission required by MoST -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Google Play Services AR permission -->
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:name=".ParticipActApplication"
+        android:icon="@drawable/ic_launcher_participact"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activities.welcome.WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+
+        <activity
+            android:name=".activities.login.ForgotActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+
+        <activity
+            android:name=".activities.dashboard.DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".activities.campaign.CampaignActivity"
+            android:label="@string/title_activity_campaign"
+            android:parentActivityName=".activities.dashboard.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.dashboard.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".activities.notifications.NotificationActivity"
+            android:label="@string/title_activity_campaign"
+            android:parentActivityName=".activities.dashboard.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.dashboard.DashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.questionnaire.QuestionnaireActivity"
+            android:label="@string/title_activity_task_questionnaire"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.campaign.CampaignActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.PicturesActivity"
+            android:label="@string/title_activity_task_picture"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.campaign.CampaignActivity" />
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:theme" />
+
+        <!-- App services -->
+        <service android:name="org.most.MoSTService" />
+        <service android:name=".services.LocationService" />
+        <service android:name="br.udesc.esag.participactbrasil.services.NetworkService" />
+        <service
+            android:name=".network.request.ApacheHttpSpiceService"
+            android:exported="false" />
+        <service
+            android:name=".network.request.ParticipactSpringAndroidService"
+            android:exported="false" />
+
+
+        <!-- App BroadcastReceivers -->
+        <receiver android:name="br.udesc.esag.participactbrasil.broadcastreceivers.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="br.udesc.esag.participactbrasil.broadcastreceivers.ShutdownBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="br.udesc.esag.participactbrasil.broadcastreceivers.UploadBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="br.udesc.esag.participactbrasil.participact.UPLOAD_INTENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="br.udesc.esag.participactbrasil.broadcastreceivers.MoSTPingBroadcastReceiver">
+            <intent-filter>
+                <action android:name="org.most.ping.action" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="br.udesc.esag.participactbrasil.broadcastreceivers.ProgressBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="br.udesc.esag.participactbrasil.participact.PROGRESS_INTENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="br.udesc.esag.participactbrasil.broadcastreceivers.DailyNotificationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="br.udesc.esag.participactbrasil.participact.DAILY_NOTIFICATION_INTENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="br.udesc.esag.participactbrasil.broadcastreceivers.ChangeDateBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="br.udesc.esag.participactbrasil.broadcastreceivers.CheckClientAppBroadcastReceiver">
+            <intent-filter>
+                <action android:name="br.udesc.esag.participactbrasil.participact.CHECK_APP_VERSION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="br.udesc.esag.participactbrasil.broadcastreceivers.ADBroadcastReceiver">
+            <intent-filter>
+                <action android:name="br.udesc.esag.participactbrasil.participact.STOP_ACTIVITY_DETECTION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="br.udesc.esag.participactbrasil.broadcastreceivers.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_INSTALL" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data
+                    android:path="br.udesc.esag.participactbrasil"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="br.udesc.esag.participactbrasil.broadcastreceivers.StateLogBroadcastReceiver">
+            <intent-filter>
+                <action android:name="br.udesc.esag.participactbrasil.participact.STATE_LOG" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="br.udesc.esag.participactbrasil.services.PendingActiveTaskIntentService"
+            android:exported="false" />
+
+        <receiver
+            android:name="br.udesc.esag.participactbrasil.broadcastreceivers.CheckPendingActionsBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="br.udesc.esag.participactbrasil.participact.CHECK_PENDING_ACTIONS" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="br.udesc.esag.participactbrasil.broadcastreceivers.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="br.udesc.esag.participactbrasil.participact" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2cdbef3f585629cfdeb60a2adff1c08b5de33314" />
+    </application>
+
+</manifest>

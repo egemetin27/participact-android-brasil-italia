@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="18dp"
+                android:textColor="#4F4F4F"
+                android:gravity="center_horizontal"
+                android:text="Reportar Problemas com o aplicativo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="14dp"
+                android:textColor="#4F4F4F"
+                android:text="Tipo de Problema"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/type"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:inputType="textCapWords"
+                    android:focusable="false"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="26dp"
+                    android:text=""/>
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@mipmap/ic_dropdown"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:onClick="typeClick"
+                    android:background="@null"
+                    android:text=""/>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="14dp"
+                android:textColor="#4F4F4F"
+                android:text="Descrição"/>
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="top"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit_text"
+                android:inputType="textCapSentences"
+                android:paddingLeft="4dp"
+                android:paddingRight="26dp"
+                android:text="">
+
+                <requestFocus/>
+
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:onClick="sendClick"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="#fff"
+                android:text="ENVIAR FEEDBACK"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:padding="10dp"
+        android:layout_gravity="right"
+        android:onClick="closeClick"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_close_detail"/>
+
+</FrameLayout>

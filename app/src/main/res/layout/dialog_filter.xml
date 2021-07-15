@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingLeft="16dp"
+            android:text="Filtrar"
+            android:textColor="#B4BF96"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="18dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonMine"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_solid_rounded_6"
+                android:backgroundTint="#4EC500"
+                android:text="MEUS"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/buttonAWeek"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_solid_rounded_6"
+                android:backgroundTint="#4EC500"
+                android:text="1 SEMANA"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/buttonAMonth"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_solid_rounded_6"
+                android:backgroundTint="#4EC500"
+                android:text="1 MÊS"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/buttonTwoMonths"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_solid_rounded_6"
+                android:backgroundTint="#4EC500"
+                android:text="2 MESES"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/buttonThreeMonths"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_solid_rounded_6"
+                android:backgroundTint="#4EC500"
+                android:text="3 MESES"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/buttonAll"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_solid_rounded_6"
+                android:backgroundTint="#4EC500"
+                android:text="TODOS"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/buttonClose"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="right"
+        android:background="@null"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_close_detail" />
+
+
+</FrameLayout>

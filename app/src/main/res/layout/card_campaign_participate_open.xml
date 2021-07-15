@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp"
+    android:focusable="false"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:background="@drawable/bg_solid_rounded_4"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/cardHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:background="@drawable/bg_solid_rounded_4"
+            android:backgroundTint="#8A7C70">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:padding="14dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:focusable="false"
+                        android:src="@mipmap/ic_logo_symbol"/>
+
+                    <TextView
+                        android:id="@+id/textTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="#fff"
+                        android:textSize="16dp"
+                        android:text="Problemas urbanos\nStatus geral da cidade"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="13dp"
+                    android:textColor="#fff"
+                    android:focusable="false"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec enim urna, aliquam eu orci in, vestibulum scelerisque magna. Nulla mattis volutpat magna ac gravida. Suspendisse quis urna id arcu aliquet egestas vitae eget quam. Maecenas ac pellentesque nisl, vel condimentum ante."/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#2000"
+                    android:padding="4dp"
+                    android:focusable="false"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="14dp">
+
+                    <TextView
+                        android:id="@+id/textDateBegin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textSize="12dp"
+                        android:textColor="#000"
+                        android:text="15/11/2017"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="80dp"
+                        android:layout_marginLeft="80dp"
+                        android:scaleY="1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:max="100"
+                        android:focusable="false"
+                        android:progress="50"
+                        android:progressTint="#919191"
+                        android:progressBackgroundTint="#D6D6D6"
+                        android:background="#d6d6d6"/>
+
+                    <TextView
+                        android:id="@+id/textDateEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginRight="4dp"
+                        android:focusable="false"
+                        android:layout_gravity="right"
+                        android:textSize="12dp"
+                        android:textColor="#000"
+                        android:text="15/11/2017"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <VideoView
+                android:id="@+id/cardHeaderLine"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:focusable="false"
+                android:background="#8A7C70"
+                android:layout_gravity="bottom"/>
+
+            <ImageView
+                android:id="@+id/imageFinished"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:focusable="false"
+                android:layout_gravity="right"
+                android:src="@mipmap/ic_campaign_ended"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginLeft="14dp"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:text="Tarefas"/>
+        
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:focusable="false"
+            android:layout_height="120dp">
+
+            <LinearLayout
+                android:id="@+id/layoutTaskItems"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_gps"/>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="14dp"
+                        android:textColor="#000"
+                        android:text="GPS"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_gps"/>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="14dp"
+                        android:textColor="#000"
+                        android:text="GPS"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_gps"/>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:lines="2"
+                        android:textSize="14dp"
+                        android:textColor="#000"
+                        android:text="GPS as dlfkj sldkjf lksdjf lkjsdf"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_gps"/>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="14dp"
+                        android:textColor="#000"
+                        android:text="GPS"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_gps"/>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:textSize="14dp"
+                        android:textColor="#000"
+                        android:text="GPS"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DEE2D4"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkboxAccept"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textTermsConditions"
+                android:focusable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="13dp"
+                android:text="Estou de acordo com os Termos e Condições."/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonParticipate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:fontFamily="@font/roboto_medium"
+            android:focusable="false"
+            android:textSize="14dp"
+            android:textColor="@color/colorAccent"
+            android:text="PARTICIPAR"/>
+        
+    </LinearLayout>
+
+</FrameLayout>

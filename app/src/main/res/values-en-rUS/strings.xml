@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">ParticipACT Brasil</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="alert">Alert</string>
+    <string name="error">Error</string>
+    <string name="network_response_error_default_message">Error response from server [0]</string>
+    <string name="image_picker_dialog_title">CHOOSE AN OPTION</string>
+    <string name="image_picker_option_camera">CAMERA</string>
+    <string name="image_picker_option_photos">PHOTOS</string>
+
+    <string name="jan">JAN</string>
+    <string name="feb">FEB</string>
+    <string name="mar">MAR</string>
+    <string name="abr">APR</string>
+    <string name="mai">MAY</string>
+    <string name="jun">JUN</string>
+    <string name="jul">JUL</string>
+    <string name="ago">AUG</string>
+    <string name="set">SEP</string>
+    <string name="out">OCT</string>
+    <string name="nov">NOV</string>
+    <string name="dez">DEC</string>
+
+    <string-array name="educations">
+        <item>Child Education</item>
+        <item>Elementary School</item>
+        <item>High School</item>
+        <item>Technical Education</item>
+        <item>Higher Education</item>
+        <item>Master\'s Degree</item>
+        <item>Doctorate Degree</item>
+        <item>Post Doctoral</item>
+    </string-array>
+    <string name="select">Select</string>
+    <string name="read_qrcode">Read QR Code</string>
+    <string name="please_provide_your_name">Please, provide your name.</string>
+    <string name="please_provide_your_email">Please, provide your e-mail.</string>
+    <string name="please_provide_your_phone_number">Please, provide your phone number.</string>
+    <string name="image_picker_option_videos">VIDEOS</string>
+
+
+</resources>

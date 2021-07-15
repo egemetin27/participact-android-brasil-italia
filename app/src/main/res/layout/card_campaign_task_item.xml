@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:tint="#000"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_gps" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:lines="3"
+        android:text="GPS"
+        android:textColor="#000"
+        android:textSize="12dp" />
+
+</LinearLayout>

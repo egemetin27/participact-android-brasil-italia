@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingLeft="16dp"
+            android:text="Gostatria de enviar à ouvidoria?"
+            android:textColor="#B4BF96"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="18dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Para enviar para a ouvidoria, você precisa preencher os seguintes dados abaixo."
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <!--NAME-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="14dp"
+                android:textColor="#4F4F4F"
+                android:text="Seu nome"/>
+
+            <com.bergmannsoft.widget.BSEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_height="36dp"
+                style="@style/EditText"
+                mandatory="true"
+                android:inputType="textCapWords"
+                android:paddingLeft="4dp"
+                android:text=""/>
+
+            <!--EMAIL-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="14dp"
+                android:textColor="#4F4F4F"
+                android:text="Seu e-mail"/>
+
+            <com.bergmannsoft.widget.BSEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_vertical"
+                style="@style/EditText"
+                mandatory="true"
+                android:inputType="textEmailAddress"
+                android:hint="E-mail"
+                android:paddingLeft="4dp"
+                android:text=""/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/buttonSend"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_solid_rounded_6"
+                android:backgroundTint="#4EC500"
+                android:text="OK"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_solid_rounded_6"
+                android:backgroundTint="#0fff"
+                android:text="CANCELAR"
+                android:textColor="#000"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/buttonClose"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="right"
+        android:background="@null"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_close_detail" />
+
+
+</FrameLayout>

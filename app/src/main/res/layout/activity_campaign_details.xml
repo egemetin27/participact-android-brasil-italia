@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/cardHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8A7C70">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:padding="14dp">
+
+                        <ImageView
+                            android:id="@+id/imageIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/ic_logo_symbol" />
+
+                        <TextView
+                            android:id="@+id/textTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="40dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Problemas urbanos\nStatus geral da cidade"
+                            android:textColor="#fff"
+                            android:textSize="16dp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Enamel pin shabby chic literally, master cleanse hot chicken disrupt cronut four loko deep v tousled. Gochujang hexagon artisan pinterest la croix squid ugh listicle letterpress. "
+                        android:textColor="#fff"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#3000" />
+
+                    <!--DATA-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp"
+                        android:background="#2000"
+                        android:focusable="false"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:id="@+id/textDateBegin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:focusable="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="15/11/2017"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                        <ProgressBar
+                            android:id="@+id/progressDate"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginRight="80dp"
+                            android:background="#d6d6d6"
+                            android:focusable="false"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressBackgroundTint="#D6D6D6"
+                            android:progressTint="#919191"
+                            android:scaleY="1" />
+
+                        <TextView
+                            android:id="@+id/textDateEnd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="4dp"
+                            android:focusable="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="15/11/2017"
+                            android:textColor="#000"
+                            android:textSize="12dp" />
+
+                    </FrameLayout>
+                    <!--DATA END-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#3000" />
+
+                    <!--PROGRESS-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="60dp"
+                            android:layout_marginTop="12dp"
+                            android:background="#3000"
+                            android:padding="6dp">
+
+                            <ProgressBar
+                                android:id="@+id/progressCampaign"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressBackgroundTint="#0000"
+                                android:progressTint="#fff"
+                                android:scaleY="2" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/textProgressCampaign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginRight="12dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="100%"
+                            android:textColor="#fff"
+                            android:textSize="16dp" />
+
+                    </FrameLayout>
+                    <!--PROGRESS END-->
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/cardHeaderLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_gravity="bottom"
+                    android:background="#8A7C70" />
+
+                <ImageView
+                    android:onClick="closeClick"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:padding="8dp"
+                    android:src="@mipmap/ic_close_detail" />
+
+            </FrameLayout>
+
+            <!--SENSORES-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Sensores em Uso"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <!--SENSORES FRAME-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSensors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="60dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textNoSensors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="NÃO HÁ SENSORES EM USO"
+                    android:textColor="#888"
+                    android:textSize="14dp" />
+
+            </FrameLayout>
+
+            <!--SENSORES FRAME END-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#4000" />
+
+            <!--TAREFAS-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Tarefas"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <!--TAREFAS FRAME-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="60dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textNoTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="NÃO HÁ TAREFAS"
+                    android:textColor="#888"
+                    android:textSize="14dp" />
+
+            </FrameLayout>
+
+            <!--TAREFAS FRAME END-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

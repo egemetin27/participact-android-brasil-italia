@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="br.com.participact.participactbrasil">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!--<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--<uses-permission android:name="android.permission.SEND_SMS" />-->
+    <!--<uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:requestLegacyExternalStorage="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name=".modules.App"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:replace="allowBackup,supportsRtl,name"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".modules.activities.SplashActivity"
+            android:screenOrientation="fullSensor"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".modules.activities.TestActivity"
+            android:screenOrientation="fullSensor"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+        </activity>
+
+        <activity
+            android:name=".modules.activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.PermissionsActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.UrbanProblemCategoriesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.UrbanProblemSubcategoriesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.TermsConditionsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.CampaignDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.CampaignTaskPhotoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.CampaignTaskQuestionTextActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.CampaignTaskQuestionChooseActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.ProfileCreateActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.ProfileEditActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.AboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.NotificationsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.SettingsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.FeedbackActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.TokenInsertActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <activity
+            android:name=".modules.activities.TutorialActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCIR3i-rMKqx7zVJ0fYJsQRiODUDicuVlQ"/>
+
+        <!--FACEBOOK-->
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+
+        <service
+            android:name="org.most.MoSTService"
+            android:enabled="true" >
+        </service>
+
+        <service
+            android:name=".modules.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!--<service-->
+            <!--android:name=".modules.fcm.MyFirebaseInstanceIDService"-->
+            <!--android:stopWithTask="false">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2cdbef3f585629cfdeb60a2adff1c08b5de33314" />
+    </application>
+
+</manifest>

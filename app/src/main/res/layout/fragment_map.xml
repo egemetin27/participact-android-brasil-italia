@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:apiKey="AIzaSyCIR3i-rMKqx7zVJ0fYJsQRiODUDicuVlQ"
+                android:clickable="true"
+                android:focusableInTouchMode="true" />
+
+            <TextView
+                android:id="@+id/textUploadProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#DD10120D"
+                android:padding="2dp"
+                android:text="Enviando foto 50%"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <!--FAB-->
+
+            <ImageButton
+                android:id="@+id/buttonMyLocation"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dp"
+                android:background="@null"
+                android:padding="4dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_my_location" />
+
+            <ImageButton
+                android:id="@+id/buttonFilter"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="100dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_filter" />
+
+            <ImageButton
+                android:id="@+id/buttonReport"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="18dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_report_urban_problem" />
+
+            <!--Urban problem report popup-->
+
+            <LinearLayout
+                android:id="@+id/popupView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#DD10120D"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Seu alerta sobre"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/textCategorySubcategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Transporte Público - Ponto de ônibus danificado"
+                    android:textColor="#D3DBBE"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="foi enviado. Obrigado!"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonDone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="36dp"
+                        android:background="@null"
+                        android:text="FINALIZAR"
+                        android:textColor="#4EC500" />
+
+                    <Button
+                        android:id="@+id/buttonShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text="COMPARTILHAR"
+                        android:textColor="#4EC500" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

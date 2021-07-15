@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "728491275474",
+    "firebase_url": "https://participactbrasil-1100.firebaseio.com",
+    "project_id": "participactbrasil-1100",
+    "storage_bucket": "participactbrasil-1100.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728491275474:android:50ab6ef8e779f46a",
+        "android_client_info": {
+          "package_name": "br.udesc.esag.participactbrasil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728491275474-285ue8amh6ef2j7sf9e6062r0h22avu2.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "728491275474-nqar2sb3etm62tr9mr647gk2o2ccl07e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKtyewyyGh7LQLdHoS8f26g8tO7GBqdbs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

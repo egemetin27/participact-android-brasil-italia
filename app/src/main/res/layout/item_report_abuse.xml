@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imageCheck"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_bt_radio_off"/>
+
+    <TextView
+        android:id="@+id/textOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:text="Opção de resposta."
+        android:textColor="#4F4F4F"
+        android:textSize="14dp" />
+
+</LinearLayout>

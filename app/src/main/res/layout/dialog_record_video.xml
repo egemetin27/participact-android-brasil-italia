@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingLeft="16dp"
+            android:text="Adicionar Video"
+            android:textColor="#B4BF96"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/roboto_regular"
+                android:text="Adicione um video."
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/buttonPlay"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:padding="10dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_video_creation"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonAction"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight=".5"
+                android:background="@null"
+                android:text="ADICIONAR"
+                android:textSize="14dp"
+                android:textColor="#0096FF"
+                android:fontFamily="@font/roboto_medium"/>
+
+            <Button
+                android:id="@+id/buttonDone"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight=".5"
+                android:background="@null"
+                android:text="PRONTO"
+                android:textSize="14dp"
+                android:textColor="#4EC500"
+                android:fontFamily="@font/roboto_medium"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/buttonClose"-->
+        <!--android:layout_width="42dp"-->
+        <!--android:layout_height="42dp"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:background="@null"-->
+        <!--android:padding="10dp"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@mipmap/ic_close_detail" />-->
+
+
+</FrameLayout>

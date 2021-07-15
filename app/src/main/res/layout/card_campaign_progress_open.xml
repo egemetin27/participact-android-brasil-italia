@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_solid_rounded_4"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:id="@+id/cardHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_solid_rounded_4"
+            android:backgroundTint="#8A7C70">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/imageIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/ic_logo_symbol" />
+
+                    <TextView
+                        android:id="@+id/textTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Problemas urbanos\nStatus geral da cidade"
+                        android:textColor="#fff"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#3000" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#2000"
+                    android:focusable="false"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/textDateBegin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:focusable="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="15/11/2017"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressDate"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginRight="80dp"
+                        android:background="#d6d6d6"
+                        android:focusable="false"
+                        android:max="100"
+                        android:progress="50"
+                        android:progressBackgroundTint="#D6D6D6"
+                        android:progressTint="#919191"
+                        android:scaleY="1" />
+
+                    <TextView
+                        android:id="@+id/textDateEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="4dp"
+                        android:focusable="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="15/11/2017"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#3000" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="#3000"
+                        android:padding="6dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressCampaign"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressBackgroundTint="#0000"
+                            android:progressTint="#fff"
+                            android:scaleY="2" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/textProgressCampaign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="12dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="100%"
+                        android:textColor="#fff"
+                        android:textSize="16dp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/cardHeaderLine"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_gravity="bottom"
+                android:background="#8A7C70" />
+
+            <ImageView
+                android:id="@+id/imageFinished"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:src="@mipmap/ic_campaign_ended" />
+
+        </FrameLayout>
+
+        <!--SENSORES-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Sensores em Uso"
+            android:textColor="#000"
+            android:textSize="16dp" />
+
+        <!--SENSORES FRAME-->
+
+        <FrameLayout
+            android:id="@+id/layoutSensors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--ITEM-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/sensorIcon1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_gps"
+                        android:tint="#000" />
+
+                    <TextView
+                        android:id="@+id/sensorText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="GPS"
+                        android:textColor="#000"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <!--ITEM-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/sensorIcon2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_gps"
+                        android:tint="#000" />
+
+                    <TextView
+                        android:id="@+id/sensorText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="GPS"
+                        android:textColor="#000"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <!--ITEM-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/sensorIconMore"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_mais_items" />
+
+                    <TextView
+                        android:id="@+id/sensorTextMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="+ 2 SENSORES"
+                        android:textColor="#000"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textNoSensors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="NÃO HÁ SENSORES EM USO"
+                android:textColor="#888"
+                android:textSize="14dp" />
+
+        </FrameLayout>
+
+        <!--SENSORES FRAME END-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:background="#EBEBEB" />
+
+        <!--TAREFAS-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Tarefas"
+            android:textColor="#000"
+            android:textSize="16dp" />
+
+        <!--TAREFAS FRAME-->
+
+        <FrameLayout
+            android:id="@+id/layoutTasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--ITEM-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/taskIcon1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_gps"
+                        android:tint="#000" />
+
+                    <TextView
+                        android:id="@+id/taskText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="GPS"
+                        android:textColor="#000"
+                        android:textSize="13dp" />
+
+                    <Button
+                        android:id="@+id/buttonStatus1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="status"/>
+
+                </LinearLayout>
+
+                <!--ITEM-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/taskIcon2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_gps"
+                        android:tint="#000" />
+
+                    <TextView
+                        android:id="@+id/taskText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="GPS"
+                        android:textColor="#000"
+                        android:textSize="13dp" />
+
+                    <Button
+                        android:id="@+id/buttonStatus2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="status"/>
+
+                </LinearLayout>
+
+                <!--ITEM-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:id="@+id/taskIconMore"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_mais_items" />
+
+                    <TextView
+                        android:id="@+id/taskTextMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="+ 2 TAREFAS"
+                        android:textColor="#000"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textNoTasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="NÃO HÁ TAREFAS"
+                android:textColor="#888"
+                android:textSize="14dp" />
+
+        </FrameLayout>
+
+        <!--TAREFAS FRAME END-->
+
+        <Button
+            android:id="@+id/buttonPauseResumeCampaign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="CONTINUAR CAMPANHA"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#45BD01">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--ID-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="ID"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressId"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="ID"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--Model-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="Modelo"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressModel"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textModel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="Galaxy X10"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--Manufacturer-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="Fabricante"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressManufacturer"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textManufacturer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="Samsung"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--OS-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="Versão OS"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressVersionOs"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textVersionOs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="18"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--App version-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="Versão App"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressVersionApp"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textVersionApp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="18"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--Connection Test 1-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="Tipo de Conexão"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressConnectionType"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textConnectionType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="Verificando"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--Connection Test 1-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="Teste Conexão 1"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressConnectionTest1"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textConnectionTest1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="Verificando"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--Connection Test 2-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="Teste Conexão 2"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressConnectionTest2"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textConnectionTest2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="Verificando"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--Connection Test 3-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="Teste Conexão 3"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressConnectionTest3"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textConnectionTest3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="Verificando"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--Connection Test 4-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|end"
+                    android:textSize="14dp"
+                    android:text="Teste Conexão 4"/>
+
+                <TextView
+                    android:layout_weight=".2"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="14dp"
+                    android:text=":"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressConnectionTest4"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:indeterminateTint="#fff"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/textConnectionTest4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="#fff"
+                        android:textSize="14dp"
+                        android:text="Verificando"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/buttonRetry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#7000"
+            android:layout_marginTop="8dp"
+            android:onClick="backAction"
+            android:textSize="14dp"
+            android:textColor="#fff"
+            android:text="FECHAR"/>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7E986C">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="230dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:onClick="backClick"
+                    android:padding="8dp"
+                    android:src="@mipmap/ic_back"/>
+
+                <ImageView
+                    android:id="@+id/categoryIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:onClick="closeClick"
+                    android:src="@mipmap/ic_policial"/>
+
+                <TextView
+                    android:id="@+id/categoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="18dp"
+                    android:textColor="#000"
+                    android:text="TRANSPORTE PUBLICOCO"/>
+"/>
+
+            </LinearLayout>
+
+
+            
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|right"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:onClick="closeClick"
+                android:padding="8dp"
+                android:src="@mipmap/ic_close_circle_white"/>
+
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom">
+
+        <EditText
+            android:id="@+id/textComments"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:background="@drawable/bg_edit_text"
+            android:paddingLeft="4dp"
+            android:gravity="top"
+            android:text="Testing"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+            <!-- AUDIO -->
+            <!--
+            2020-09-12: Claudionor, ocultando temporariamente devido restricoes no servidor da UFSC
+            -->
+            <FrameLayout
+                android:visibility="invisible"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight=".3">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="audioClick"
+                    android:src="@mipmap/btn_audio"/>
+
+                <TextView
+                    android:id="@+id/textAudioCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_badge"
+                    android:minWidth="16dp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    android:text="1"/>
+
+            </FrameLayout>
+            <!-- FOTO -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight=".3">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:onClick="photoClick"
+                    android:src="@mipmap/btn_photo"/>
+
+                <TextView
+                    android:id="@+id/textPhotoCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_badge"
+                    android:minWidth="16dp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    android:text="1"/>
+
+            </FrameLayout>
+            <!-- VIDEO -->
+            <!--
+            2020-09-12: Claudionor, ocultando temporariamente devido restricoes no servidor da UFSC
+            -->
+            <FrameLayout
+                android:visibility="invisible"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight=".3">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:onClick="videoClick"
+                    android:src="@mipmap/btn_video"/>
+
+                <TextView
+                    android:id="@+id/textVideoCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/bg_badge"
+                    android:minWidth="16dp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    android:text="1"/>
+
+            </FrameLayout>
+            
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_solid_rounded_4"
+            android:backgroundTint="#DCDCDC"
+            android:layout_marginTop="8dp"
+            android:textSize="12dp"
+            android:textColor="#828282"
+            android:onClick="sendClick"
+            android:text="ENVIAR FEEDBACK"/>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:background="@color/colorPrimary"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:src="@mipmap/logo_black"
+            android:layout_width="match_parent"
+            android:adjustViewBounds="true"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:text="ParticipACT necessita de algumas permissões para funcionar corretamente.\n\n
+
+                O app solicitará algumas permissões para acessar a câmera, localização e acesso para salvar dados no sistema de arquivos.\n\n
+
+                Por favor, clique em OK e aceite as permissões."/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+                android:onClick="doPermissionAction"
+                android:textSize="18dp"
+                android:text="OK"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

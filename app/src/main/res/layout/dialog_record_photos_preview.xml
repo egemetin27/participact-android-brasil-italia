@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/photo1"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_weight=".5"
+            android:src="@mipmap/photo_dummy"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight=".5"
+                android:background="@null"
+                android:text="EXCLUIR"
+                android:textSize="14dp"
+                android:textColor="#FF2600"
+                android:fontFamily="@font/roboto_medium"/>
+
+            <Button
+                android:id="@+id/buttonDone"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight=".5"
+                android:background="@null"
+                android:text="OK"
+                android:textSize="14dp"
+                android:textColor="#4EC500"
+                android:fontFamily="@font/roboto_medium"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/buttonClose"-->
+        <!--android:layout_width="42dp"-->
+        <!--android:layout_height="42dp"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:background="@null"-->
+        <!--android:padding="10dp"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@mipmap/ic_close_detail" />-->
+
+
+</FrameLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@mipmap/ic_participact"
+            android:title="SOBRE O PARTICIPACT" />
+        <item
+            android:id="@+id/nav_tutorial"
+            android:icon="@mipmap/ic_menu_tutorial"
+            android:title="TUTORIAL" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@mipmap/ic_menu_profile"
+            android:title="MEU PERFIL" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@mipmap/ic_notifications_white"
+            android:title="NOTIFICAÇÕES" />
+
+        <item
+            android:id="@+id/nav_config"
+            android:icon="@mipmap/ic_menu_config"
+            android:title="CONFIGURAÇÕES" />
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@mipmap/ic_menu_feedback"
+            android:title="RELATAR ERRO" />
+
+        <item
+            android:id="@+id/nav_qr_code"
+            android:icon="@mipmap/ic_menu_qr_code"
+            android:title="LER TOKEN/QR CODE" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@mipmap/ic_menu_exit"
+            android:title="SAIR" />
+    </group>
+
+</menu>

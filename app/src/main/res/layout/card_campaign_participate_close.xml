@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_solid_rounded_4"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/cardHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_solid_rounded_4"
+            android:backgroundTint="#8A7C70">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_logo_symbol"/>
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:text="Problemas urbanos\nStatus geral da cidade"/>
+
+            </LinearLayout>
+
+            <VideoView
+                android:id="@+id/cardHeaderLine"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#8A7C70"
+                android:layout_gravity="bottom"/>
+
+            <ImageView
+                android:id="@+id/imageFinished"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:src="@mipmap/ic_campaign_ended"/>
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/buttonParticipate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:fontFamily="@font/roboto_medium"
+            android:focusable="false"
+            android:textSize="14dp"
+            android:textColor="@color/colorAccent"
+            android:text="PARTICIPAR"/>
+        
+    </LinearLayout>
+
+</FrameLayout>

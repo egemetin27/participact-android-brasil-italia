@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">ParticipACT Brasil</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="alert">Alerta</string>
+    <string name="error">Erro</string>
+    <string name="network_response_error_default_message">Error response from server [0]</string>
+    <string name="image_picker_dialog_title">ESCOLHA UMA OPÇÃO</string>
+    <string name="image_picker_option_camera">CÂMERA</string>
+    <string name="image_picker_option_photos">FOTOS</string>
+
+    <string name="jan">JAN</string>
+    <string name="feb">FEB</string>
+    <string name="mar">MAR</string>
+    <string name="abr">ABR</string>
+    <string name="mai">MAI</string>
+    <string name="jun">JUN</string>
+    <string name="jul">JUL</string>
+    <string name="ago">AGO</string>
+    <string name="set">SET</string>
+    <string name="out">OUT</string>
+    <string name="nov">NOV</string>
+    <string name="dez">DEZ</string>
+
+    <string name="facebook_app_id" translatable="false">969005766542575</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb969005766542575</string>
+
+    <string-array name="educations">
+        <item>Educação Infantil</item>
+        <item>Ensino Fundamental</item>
+        <item>Ensino Médio</item>
+        <item>Ensino Técnico</item>
+        <item>Ensino Superior</item>
+        <item>Mestrado</item>
+        <item>Doutorado</item>
+        <item>Pós Doutorado</item>
+    </string-array>
+    <string name="select">Selecione</string>
+    <string name="read_qrcode">Ler QR Code</string>
+    <string name="please_provide_your_name">Por favor, preencha seu nome.</string>
+    <string name="please_provide_your_email">Por favor, preencha seu e-mail.</string>
+    <string name="please_provide_your_phone_number">Por favor, preencha seu telefone.</string>
+    <string name="image_picker_option_videos">VÍDEOS</string>
+
+
+</resources>

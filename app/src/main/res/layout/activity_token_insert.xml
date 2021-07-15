@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/splash"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ddDEE2D4">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:src="@mipmap/logo_black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="#333333"
+                android:textSize="20dp"
+                android:text="CONFIRMAR TOKEN"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="#333333"
+                android:textSize="14dp"
+                android:text="Recebeu um convite por e-mail com um token de identificação?\n\n
+
+Por favor, confirme abaixo o token recebido:"/>
+
+            <EditText
+                android:id="@+id/textToken"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit_text_insert_token"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="confirmTokenClick"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="#fff"
+                android:text="CONFIRMAR TOKEN"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="shootClick"
+                    android:backgroundTint="@color/colorAccent"
+                    android:textColor="#fff"
+                    android:text="FOTOGRAFAR QR CODE"/>
+
+            </FrameLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:onClick="closeClick"
+                android:layout_marginBottom="8dp"
+                android:background="@null"
+                android:textColor="#fff"
+                android:text="PULAR"/>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

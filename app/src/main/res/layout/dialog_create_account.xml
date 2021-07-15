@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingLeft="16dp"
+            android:text="Já criou a sua conta?"
+            android:textColor="#B4BF96"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="18dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Para poder enviar os seus alertas, primeiro crie sua conta. Você pode criar rapidamente fazendo login com Facebook ou Google+."
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <FrameLayout
+                android:id="@+id/buttonFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_solid_rounded_6"
+                    android:backgroundTint="#3B5998"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="Cadastrar com Facebook"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:src="@mipmap/ic_facebook" />
+
+
+            </FrameLayout>
+
+            <!--
+            2021-07-14: Claudionor, desativando login com o google
+            -->
+            <FrameLayout
+                android:id="@+id/buttonGplus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_solid_rounded_6"
+                    android:backgroundTint="#DD4B39"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="16dp"
+                    android:text="Cadastrar com Google+"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:src="@mipmap/ic_google_plus" />
+
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/buttonSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_solid_rounded_6"
+                android:backgroundTint="#4EC500"
+                android:text="CRIAR MINHA CONTA"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/buttonClose"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="right"
+        android:background="@null"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_close_detail" />
+
+
+</FrameLayout>

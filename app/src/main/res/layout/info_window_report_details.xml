@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_solid_rounded_4"
+                android:backgroundTint="#487792"
+                android:padding="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iconCategory"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@mipmap/ic_policial"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textCategoryName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textSize="16dp"
+                            android:textColor="#fff"
+                            android:text="MOBILIDADE URBANA"/>
+
+                        <TextView
+                            android:id="@+id/textSubcategoryName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:lines="1"
+                            android:textSize="14dp"
+                            android:textColor="#fff"
+                            android:text="Via com buracos"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_gravity="bottom"
+                android:background="#487792"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_solid_rounded_4"
+                android:backgroundTint="#fff"
+                android:padding="8dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="14dp"
+                            android:textColor="#4F4F4F"
+                            android:text="10/03/18"/>
+
+                        <TextView
+                            android:id="@+id/textTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:textSize="14dp"
+                            android:textColor="#4F4F4F"
+                            android:text="17:59 PM"/>
+
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:orientation="horizontal">
+                        
+                        <ImageView
+                            android:id="@+id/iconComments"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@mipmap/ic_ub_comments"/>
+
+                        <ImageView
+                            android:id="@+id/iconAudio"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:padding="1dp"
+                            android:src="@mipmap/ic_ub_audio"/>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/iconPhotos"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@mipmap/ic_ub_photos"/>
+
+                            <TextView
+                                android:id="@+id/textPhotoCount"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="right"
+                                android:background="@drawable/bg_badge"
+                                android:backgroundTint="#FF9600"
+                                android:fontFamily="@font/roboto_bold"
+                                android:textSize="9dp"
+                                android:textColor="#4F4F4F"
+                                android:gravity="center"
+                                android:text="99"/>
+
+                        </FrameLayout>
+
+
+
+                        <ImageView
+                            android:id="@+id/iconVideo"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="2dp"
+                            android:padding="1dp"
+                            android:src="@mipmap/ic_ub_video"/>
+                        
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#2000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="COMPARTILHAR"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="#fff"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

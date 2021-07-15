@@ -1,5 +1,0 @@
-<resources>
-
-    <style name="AppThemeMost" parent="android:Theme.Holo.Light.DarkActionBar" />
-
-</resources>

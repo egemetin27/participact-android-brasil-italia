@@ -24,6 +24,7 @@ import java.io.InputStreamReader;
 import br.com.participact.participactbrasil.BuildConfig;
 import br.com.participact.participactbrasil.R;
 import br.com.participact.participactbrasil.modules.App;
+import br.com.participact.participactbrasil.modules.enums.Constants;
 
 public class AboutActivity extends BaseActivity {
 
@@ -42,7 +43,7 @@ public class AboutActivity extends BaseActivity {
             public void run() {
                 try {
                     HttpClient httpclient = new DefaultHttpClient(); // Create HTTP Client
-                    HttpGet httpget = new HttpGet("https://bagheera.participact.com.br/v2/pages/PAGE_ABOUT"); // Set the action you want to do
+                    HttpGet httpget = new HttpGet(String.format("%s/v2/pages/PAGE_ABOUT", Constants.HOST)); // Set the action you want to do
                     HttpResponse response = httpclient.execute(httpget); // Executeit
                     HttpEntity entity = response.getEntity();
                     InputStream is = entity.getContent(); // Create an InputStream with the response

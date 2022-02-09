@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import br.com.participact.participactbrasil.modules.enums.Constants;
+
 public class ConnectionUtils {
 
     private static final String TAG = ConnectionUtils.class.getSimpleName();
@@ -48,7 +50,7 @@ public class ConnectionUtils {
     }
 
     public static void isOnline(final Context context, final CheckOnlineCallback callback) {
-        isOnline(context, "https://bagheera.participact.com.br/v2/", callback);
+        isOnline(context, String.format("%s/v2/", Constants.HOST), callback);
     }
 
     public static void isOnline(final Context context, final String url, final CheckOnlineCallback callback) {

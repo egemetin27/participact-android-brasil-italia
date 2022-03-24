@@ -51,6 +51,7 @@ public class ConnectionUtils {
 
     public static void isOnline(final Context context, final CheckOnlineCallback callback) {
         isOnline(context, String.format("%s/v2/", Constants.HOST), callback);
+        //isOnline(context, String.format("%s/", Constants.HOST), callback);
     }
 
     public static void isOnline(final Context context, final String url, final CheckOnlineCallback callback) {
